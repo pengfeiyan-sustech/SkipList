@@ -1,4 +1,5 @@
 # 跳表项目
+
 ## 项目讲解🙂
 1. [Node类定义](https://github.com/pengfeiyan-sustech/SkipList/blob/master/%E9%A1%B9%E7%9B%AE%E8%AE%B2%E8%A7%A3/1.Node%E7%B1%BB%E5%AE%9A%E4%B9%89.md#%E8%B7%B3%E8%A1%A8%E7%9A%84%E5%AE%9A%E4%B9%89)
 
@@ -17,3 +18,9 @@
 8. [添加互斥锁](https://github.com/pengfeiyan-sustech/SkipList/blob/master/%E9%A1%B9%E7%9B%AE%E8%AE%B2%E8%A7%A3/8.%E6%B7%BB%E5%8A%A0%E4%BA%92%E6%96%A5%E9%94%81.md#%E6%B7%BB%E5%8A%A0%E4%BA%92%E6%96%A5%E9%94%81)
 
 9. [压力测试](https://github.com/pengfeiyan-sustech/SkipList/blob/master/%E9%A1%B9%E7%9B%AE%E8%AE%B2%E8%A7%A3/9.%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95.md#%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95)
+
+项目运行方式
+```
+g++ --std=c++11 main.cpp -o app -pthread
+g++ --std=c++11 stressTest.cpp -o app -pthread
+```
