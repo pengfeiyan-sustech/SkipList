@@ -5,3 +5,5 @@
 2. [SkipList类定义](https://github.com/pengfeiyan-sustech/SkipList/blob/master/%E9%A1%B9%E7%9B%AE%E8%AE%B2%E8%A7%A3/2.SkipList%E7%B1%BB%E5%AE%9A%E4%B9%89.md#skiplist%E7%B1%BB%E5%AE%9A%E4%B9%89)
 
 3. [跳表的层级](https://github.com/pengfeiyan-sustech/SkipList/blob/master/%E9%A1%B9%E7%9B%AE%E8%AE%B2%E8%A7%A3/3.%E8%B7%B3%E8%A1%A8%E7%9A%84%E5%B1%82%E7%BA%A7.md#%E8%B7%B3%E8%A1%A8%E7%9A%84%E5%B1%82%E7%BA%A7)
+
+4. [跳表的插入](https://github.com/pengfeiyan-sustech/SkipList/blob/master/%E9%A1%B9%E7%9B%AE%E8%AE%B2%E8%A7%A3/4.%E8%B7%B3%E8%A1%A8%E7%9A%84%E6%8F%92%E5%85%A5.md#%E8%B7%B3%E8%A1%A8%E7%9A%84%E6%8F%92%E5%85%A5)
