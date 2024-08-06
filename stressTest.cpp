@@ -12,13 +12,15 @@
 SkipList<int, std::string> skipList(18); // 创建一个最大层级为18的跳表实例
 
 // 插入元素的线程函数
-void *insertElement(void* threadid) {
+void *insertElement(void* threadid) 
+{
     long tid; // 线程ID
     tid = (long)threadid; // 将void*类型的线程ID转换为long型
     std::cout << tid << std::endl; // 输出线程ID
     int tmp = TEST_COUNT/NUM_THREADS; // 计算每个线程应该插入的元素数量
     // 循环插入元素
-    for (int i=tid*tmp, count=0; count<tmp; i++) {
+    for (int i=tid*tmp, count=0; count<tmp; i++) 
+    {
         count++;
         skipList.insert_element(rand() % TEST_COUNT, "a"); // 随机生成一个键，并插入带有"a"的元素
     }
@@ -26,20 +28,23 @@ void *insertElement(void* threadid) {
 }
 
 // 检索元素的线程函数
-void *getElement(void* threadid) {
+void *getElement(void* threadid) 
+{
     long tid; // 线程ID
     tid = (long)threadid; // 将void*类型的线程ID转换为long型
     std::cout << tid << std::endl; // 输出线程ID
     int tmp = TEST_COUNT/NUM_THREADS; // 计算每个线程应该检索的元素数量
     // 循环检索元素
-    for (int i=tid*tmp, count=0; count<tmp; i++) {
+    for (int i=tid*tmp, count=0; count<tmp; i++) 
+    {
         count++;
         skipList.search_element(rand() % TEST_COUNT); // 随机生成一个键，并尝试检索
     }
     pthread_exit(NULL); // 退出线程
 }
 
-int main() {
+int main() 
+{
     srand(time(NULL)); // 初始化随机数生成器
     {
         pthread_t threads[NUM_THREADS]; // 定义线程数组
@@ -49,11 +54,13 @@ int main() {
         auto start = std::chrono::high_resolution_clock::now(); // 开始计时
 
         // 创建插入元素的线程
-        for( i = 0; i < NUM_THREADS; i++ ) {
+        for( i = 0; i < NUM_THREADS; i++ ) 
+        {
             std::cout << "main() : creating thread, " << i << std::endl;
             rc = pthread_create(&threads[i], NULL, insertElement, (void *)i); // 创建线程
 
-            if (rc) {
+            if (rc) 
+            {
                 std::cout << "Error:unable to create thread," << rc << std::endl;
                 exit(-1); // 如果线程创建失败，退出程序
             }
@@ -61,8 +68,10 @@ int main() {
 
         void *ret; // 用于接收pthread_join的返回值
         // 等待所有插入线程完成
-        for( i = 0; i < NUM_THREADS; i++ ) {
-            if (pthread_join(threads[i], &ret) != 0 )  {
+        for( i = 0; i < NUM_THREADS; i++ ) 
+        {
+            if (pthread_join(threads[i], &ret) != 0 )  
+            {
                 perror("pthread_create() error");
                 exit(3); // 如果线程等待失败，退出程序
             }
@@ -79,19 +88,23 @@ int main() {
         int i;
         auto start = std::chrono::high_resolution_clock::now();
 
-        for( i = 0; i < NUM_THREADS; i++ ) {
+        for( i = 0; i < NUM_THREADS; i++ ) 
+        {
             std::cout << "main() : creating thread, " << i << std::endl;
             rc = pthread_create(&threads[i], NULL, getElement, (void *)i);
 
-            if (rc) {
+            if (rc) 
+            {
                 std::cout << "Error:unable to create thread," << rc << std::endl;
                 exit(-1);
             }
         }
 
         void *ret;
-        for( i = 0; i < NUM_THREADS; i++ ) {
-            if (pthread_join(threads[i], &ret) != 0 )  {
+        for( i = 0; i < NUM_THREADS; i++ ) 
+        {
+            if (pthread_join(threads[i], &ret) != 0 )  
+            {
                 perror("pthread_create() error");
                 exit(3);
             }
