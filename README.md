@@ -15,3 +15,5 @@
 7. [生成和读取持久化文件](https://github.com/pengfeiyan-sustech/SkipList/blob/master/%E9%A1%B9%E7%9B%AE%E8%AE%B2%E8%A7%A3/7.%E7%94%9F%E6%88%90%E5%92%8C%E8%AF%BB%E5%8F%96%E6%8C%81%E4%B9%85%E5%8C%96%E6%96%87%E4%BB%B6.md#%E7%94%9F%E6%88%90%E5%92%8C%E8%AF%BB%E5%8F%96%E6%8C%81%E4%B9%85%E5%8C%96%E6%96%87%E4%BB%B6)
 
 8. [添加互斥锁](https://github.com/pengfeiyan-sustech/SkipList/blob/master/%E9%A1%B9%E7%9B%AE%E8%AE%B2%E8%A7%A3/8.%E6%B7%BB%E5%8A%A0%E4%BA%92%E6%96%A5%E9%94%81.md#%E6%B7%BB%E5%8A%A0%E4%BA%92%E6%96%A5%E9%94%81)
+
+9. [压力测试](https://github.com/pengfeiyan-sustech/SkipList/blob/master/%E9%A1%B9%E7%9B%AE%E8%AE%B2%E8%A7%A3/9.%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95.md#%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95)
